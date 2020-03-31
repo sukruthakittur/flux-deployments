@@ -425,8 +425,8 @@ metadata:
     app.kubernetes.io/managed-by: Tiller
 type: Opaque
 data:
-  admin-user: "YWRtaW4="
-  admin-password: "cHJvbS1vcGVyYXRvcg=="
+  admin-user: "admin"
+  admin-password: "pass"
   ldap-toml: ""
 
 ---
