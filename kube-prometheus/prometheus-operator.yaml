@@ -436,6 +436,16 @@ data:
       url: http://prometheus-operator-prometheus:9090/
       access: proxy
       isDefault: true
+    - access: proxy
+      editable: true
+      isDefault: true
+      jsonData:
+        tlsSkipVerify: true
+      name: prometheus
+      orgId: 1
+      type: prometheus
+      url: http://prometheus-server.prometheus.svc.cluster.local
+      version: 1
 kind: ConfigMap
 metadata:
   labels:
@@ -50271,7 +50281,13 @@ spec:
           httpGet:
             path: /
             port: 9100
-        resources: {}
+        resources:
+          limits:
+            cpu: 100m
+            memory: 128Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
         volumeMounts:
         - mountPath: /host/proc
           name: proc
@@ -50413,7 +50429,13 @@ spec:
           httpGet:
             path: /api/health
             port: 3000
-        resources: {}
+        resources:
+          limits:
+            cpu: 100m
+            memory: 128Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
         volumeMounts:
         - mountPath: /etc/grafana/grafana.ini
           name: config
@@ -50526,6 +50548,13 @@ spec:
             port: 8080
           initialDelaySeconds: 5
           timeoutSeconds: 5
+        resources:
+          limits:
+            cpu: 100m
+            memory: 400Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
       hostNetwork: false
       securityContext:
         fsGroup: 65534
@@ -50573,7 +50602,13 @@ spec:
         ports:
         - containerPort: 8080
           name: http
-        resources: {}
+        resources:
+          limits:
+            cpu: 200m
+            memory: 200Mi
+          requests:
+            cpu: 100m
+            memory: 100Mi
         securityContext:
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
@@ -53066,4 +53101,3 @@ webhooks:
     - UPDATE
     resources:
     - prometheusrules
-
