@@ -446,6 +446,16 @@ data:
       type: prometheus
       url: http://prometheus-server.prometheus.svc.cluster.local
       version: 1
+    - access: proxy
+      editable: true
+      isDefault: true
+      jsonData:
+        tlsSkipVerify: true
+      name: prometheus
+      orgId: 1
+      type: prometheus
+      url: http://prometheus-server.prometheus.svc.cluster.local
+      version: 1
 kind: ConfigMap
 metadata:
   labels:
