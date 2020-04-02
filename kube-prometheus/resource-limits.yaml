@@ -23,7 +23,7 @@ spec:
     replicationcontrollers: 20
     requests.cpu: 100m
     requests.ephemeral-storage: 25Gi
-    requests.memory: 100Mi
+    requests.memory: 300Mi
     requests.nvidia.com/gpu: 0
     requests.storage: 100Gi
     secrets: 30
