@@ -14,19 +14,19 @@ metadata:
   namespace: monitoring
 spec:
   hard:
-    configmaps: 10
-    limits.cpu: 2
+    configmaps: 50
+    limits.cpu: 8000m
     limits.ephemeral-storage: 50Gi
-    limits.memory: 2Gi
+    limits.memory: 50Gi
     persistentvolumeclaims: 5
-    pods: 10
+    pods: 20
     replicationcontrollers: 20
-    requests.cpu: 1
+    requests.cpu: 8000m
     requests.ephemeral-storage: 25Gi
     requests.memory: 1Gi
     requests.nvidia.com/gpu: 0
-    requests.storage: 25Gi
-    secrets: 10
+    requests.storage: 100Gi
+    secrets: 30
     services: 10
     services.loadbalancers: 0
 
@@ -47,14 +47,14 @@ metadata:
 spec:
   limits:
   - default:
-      cpu: 3000m
-      memory: 6Gi
+      cpu: 8000m
+      memory: 50Gi
     defaultRequest:
       cpu: 100m
       memory: 111Mi
     max:
-      cpu: 3000m
-      memory: 6Gi
+      cpu: 8000m
+      memory: 50Gi
     min:
       cpu: 100m
       memory: 99Mi

@@ -54599,3 +54599,4 @@ webhooks:
     - UPDATE
     resources:
     - prometheusrules
+
