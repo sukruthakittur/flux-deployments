@@ -15,7 +15,7 @@ metadata:
 spec:
   hard:
     configmaps: 50
-    limits.cpu: 8000m
+    limits.cpu: 12000m
     limits.ephemeral-storage: 50Gi
     limits.memory: 50Gi
     persistentvolumeclaims: 5
