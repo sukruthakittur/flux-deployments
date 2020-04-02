@@ -51717,7 +51717,7 @@ spec:
             memory: 6Gi
           requests:
             cpu: 100m
-            memory: 2Gi
+            memory: 100Mi
         volumeMounts:
         - mountPath: /etc/grafana/grafana.ini
           name: config
