@@ -394,7 +394,7 @@ data:
       version: 1
     - access: proxy
       editable: true
-      isDefault: true
+      isDefault: false
       jsonData:
         tlsSkipVerify: true
       name: prometheus
