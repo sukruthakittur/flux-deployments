@@ -21,7 +21,7 @@ spec:
     persistentvolumeclaims: 5
     pods: 20
     replicationcontrollers: 20
-    requests.cpu: 3000m
+    requests.cpu: 12000m
     requests.ephemeral-storage: 25Gi
     requests.memory: 5000Mi
     requests.nvidia.com/gpu: 0
