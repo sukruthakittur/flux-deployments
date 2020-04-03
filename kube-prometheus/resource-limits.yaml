@@ -15,17 +15,17 @@ metadata:
 spec:
   hard:
     configmaps: 50
-    limits.cpu: 50000m
+    limits.cpu: 20000m
     limits.ephemeral-storage: 50Gi
     limits.memory: 50Gi
     persistentvolumeclaims: 5
     pods: 20
     replicationcontrollers: 20
-    requests.cpu: 1
+    requests.cpu: 12000m
     requests.ephemeral-storage: 25Gi
-    requests.memory: 1Gi
+    requests.memory: 5Gi
     requests.nvidia.com/gpu: 0
-    requests.storage: 25Gi
+    requests.storage: 100Gi
     secrets: 30
     services: 10
     services.loadbalancers: 0
