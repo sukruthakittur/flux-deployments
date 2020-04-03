@@ -17,7 +17,7 @@ spec:
     configmaps: 50
     limits.cpu: 20000m
     limits.ephemeral-storage: 50Gi
-    limits.memory: 2Gi
+    limits.memory: 50Gi
     persistentvolumeclaims: 5
     pods: 20
     replicationcontrollers: 20
