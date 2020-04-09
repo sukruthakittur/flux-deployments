@@ -1,4 +1,4 @@
----
+
 ---
 # Source: operator/templates/namespace.yaml
 apiVersion: v1
@@ -14,7 +14,7 @@ metadata:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  namespace: 
+  namespace:
   name: istio-operator
 ---
 
@@ -188,7 +188,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: istio-operator
-  namespace: 
+  namespace:
 roleRef:
   kind: ClusterRole
   name: istio-operator
@@ -199,7 +199,7 @@ roleRef:
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: 
+  namespace:
   labels:
     name: istio-operator
   name: istio-operator
